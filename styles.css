@@ -194,14 +194,14 @@ h3 {
 }
 
 .button.primary {
-  background: linear-gradient(135deg, var(--steel), #ffffff);
+  background: var(--blue); /* linear-gradient(135deg, var(--steel), #ffffff); */
   color: #050607;
   box-shadow: 0 10px 36px rgba(255,255,255,0.12);
 }
 
 .button.secondary {
   border: 1px solid var(--line);
-  color: var(--text);
+  color: var(--blue);
   background: var(--panel);
 }
 
