@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>OSINT Threat Intelligence API: A Buyer's Guide for Defense Teams | Said Horizon</title>
+  <meta name="description" content="Not all threat intelligence APIs are built for kinetic threats. Learn what an OSINT threat intelligence API is, how kinetic I&W intelligence differs from cyber threat intel, what defense teams should require, and how Said Horizon's API is structured." />
+  <meta name="keywords" content="OSINT threat intelligence API, open source threat intelligence API, strike prediction API, kinetic threat intelligence API, defense OSINT API, threat signal API, I&W intelligence API, OSINT API defense" />
+
+  <meta property="og:title" content="OSINT Threat Intelligence API: A Buyer's Guide for Defense Teams" />
+  <meta property="og:description" content="What an OSINT threat intelligence API is, how kinetic intelligence differs from cyber intel, and what defense teams should require from a platform." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://saidindustries.com/osint-threat-intelligence-api" />
+
+  <link rel="canonical" href="https://saidindustries.com/osint-threat-intelligence-api" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "OSINT Threat Intelligence API: A Buyer's Guide for Defense Teams",
+    "description": "What defense teams should look for in an OSINT threat intelligence API — covering kinetic vs. cyber intelligence, data sources, structured output, and API integration.",
+    "author": { "@type": "Organization", "name": "Said Industries" },
+    "publisher": { "@type": "Organization", "name": "Said Industries", "url": "https://saidindustries.com" },
+    "url": "https://saidindustries.com/osint-threat-intelligence-api"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an OSINT threat intelligence API?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An OSINT threat intelligence API is a programmatic interface that delivers structured threat intelligence derived from open-source data — public media, government notices, social platforms, and aviation data. It returns machine-readable alert objects that can be integrated into existing analyst workflows, autonomous systems, or decision-support platforms without requiring manual data collection or analyst triage at the ingestion layer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is a kinetic threat intelligence API different from a cyber threat intelligence API?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cyber threat intelligence APIs focus on digital threat indicators: malware hashes, phishing URLs, compromised IP addresses, and adversary TTPs in network environments. Kinetic threat intelligence APIs focus on physical-world threats: airstrikes, missile launches, and drone attacks. The data sources, indicator types, detection logic, and alerting cadence are fundamentally different. A platform built for cyber intel is not useful for kinetic early warning."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should structured output from an OSINT kinetic threat API include?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A well-designed kinetic threat intelligence API should return: a threat type classification, geographic region of concern, confidence score, urgency rating, signal source count and type breakdown, trend direction (increasing/decreasing/stable), chain-of-reasoning summary, and timestamp. Alerts should be structured JSON, not unformatted text, so they can be consumed programmatically by downstream systems."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .page-hero { min-height: auto; padding: 80px 20px 60px; }
+    .prose { max-width: 760px; }
+    .prose h2 { font-size: clamp(26px, 3vw, 40px); margin-top: 52px; margin-bottom: 14px; }
+    .prose p { color: var(--muted); font-size: 17px; line-height: 1.75; margin-bottom: 20px; }
+    .prose ul { color: var(--muted); font-size: 17px; line-height: 1.75; padding-left: 22px; margin-bottom: 20px; }
+    .prose li { margin-bottom: 8px; }
+    .prose strong { color: var(--text); }
+    .breadcrumb { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+    .breadcrumb a { color: var(--blue); }
+    .code-block {
+      background: rgba(0,0,0,0.45);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px 26px;
+      margin: 28px 0;
+      font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
+      font-size: 13px;
+      color: #b8d4f0;
+      line-height: 1.7;
+      white-space: pre;
+      overflow-x: auto;
+    }
+    .faq-inline { margin-top: 48px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Said Industries home">
+      <img src="assets/said-logo.png" alt="Said Industries logo" />
+    </a>
+    <nav class="nav">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#signals">Signals</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="nav-cta" href="https://calendly.com/will-saidindustries/api-access" target="_blank" rel="noopener">Get API Access</a>
+    </nav>
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero page-hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <p class="eyebrow">For defense &amp; technical buyers</p>
+        <h1 style="font-size:clamp(38px,6vw,72px);line-height:1.0;">OSINT Threat Intelligence API: A Buyer's Guide for Defense Teams</h1>
+        <p class="hero-copy" style="font-size:clamp(17px,2vw,21px);">
+          Not all threat intelligence APIs are built for kinetic threats. Here is what an OSINT threat intelligence API is, how kinetic I&amp;W intelligence differs from cyber intel, what defense teams should require, and how Said Horizon's API is structured.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:40px;">
+      <div class="prose">
+        <p class="breadcrumb"><a href="index.html">Said Horizon</a> &rsaquo; OSINT Threat Intelligence API</p>
+
+        <h2>What is an OSINT threat intelligence API?</h2>
+        <p>
+          An OSINT (open-source intelligence) threat intelligence API is a programmatic interface that delivers structured intelligence derived from publicly available data sources — news media, government notices, social platforms, aviation databases, and regional web sources. Instead of requiring analysts to manually collect and triage raw data, an OSINT API aggregates, processes, and delivers structured alerts that downstream systems can consume directly.
+        </p>
+        <p>
+          For defense and intelligence teams, this means threat intelligence can be integrated into existing analyst workflows, autonomous systems, decision-support platforms, or command-and-control interfaces via standard REST calls — without a dedicated human monitoring the underlying data sources.
+        </p>
+
+        <h2>Kinetic threat intelligence vs. cyber threat intelligence: a critical distinction</h2>
+        <p>
+          The threat intelligence API market is dominated by products built for the cybersecurity use case. Platforms like Recorded Future, ThreatConnect, and Anomali are designed to detect and track digital threats: malware signatures, phishing campaigns, compromised infrastructure, adversary TTPs (tactics, techniques, and procedures) in network environments.
+        </p>
+        <p>
+          Kinetic threat intelligence is a fundamentally different product:
+        </p>
+        <ul>
+          <li><strong>Different data sources</strong> — Kinetic threats are detected through local-language media, aviation restriction notices, ground-level social signals, and physical-world anomaly patterns — not through malware analysis, dark web forums, or network telemetry.</li>
+          <li><strong>Different indicator types</strong> — The indicators of a missile launch or airstrike (airspace closures, logistics movements, local media signals) share nothing with the indicators of a cyberattack (CVEs, C2 infrastructure, phishing kits).</li>
+          <li><strong>Different latency requirements</strong> — Kinetic threat early warning must deliver pre-event signals within hours of their appearance in open sources. Cyber threat intel can often tolerate longer enrichment cycles.</li>
+          <li><strong>Different consumer profiles</strong> — Kinetic threat intelligence feeds missile defense systems, autonomous platforms, aerospace operators, and national security analysts — not SOC teams running SIEM queries.</li>
+        </ul>
+        <p>
+          A defense team evaluating an OSINT threat intelligence API for kinetic early warning should not evaluate cyber-focused platforms as alternatives. They are not addressing the same problem.
+        </p>
+
+        <h2>What defense teams should require from a kinetic OSINT API</h2>
+        <p>
+          When evaluating an OSINT threat intelligence API for kinetic threat early warning, the capabilities that separate adequate from purpose-built are:
+        </p>
+        <ul>
+          <li><strong>Multilingual ingestion at scale</strong> — The most valuable pre-strike signals appear first in local-language sources, often in low-resource languages. An API that only processes English-language data will consistently lag behind events.</li>
+          <li><strong>Continuous ingestion, not scheduled batch</strong> — Kinetic threats do not respect batch windows. An API that refreshes data on hourly or daily cycles cannot deliver meaningful early warning.</li>
+          <li><strong>Anomaly detection, not keyword matching</strong> — Keyword-based monitoring catches signals only after the explicit language is widely reported — too late to be useful. Purpose-built kinetic OSINT uses pattern recognition and cross-source anomaly detection to identify unusual activity before obvious language appears.</li>
+          <li><strong>Structured output with machine-readable scoring</strong> — Alerts should return JSON objects with confidence scores, urgency ratings, source counts, and chain-of-reasoning — not raw text that requires further triage before it can be acted upon.</li>
+          <li><strong>Geographic precision</strong> — Alerts should be localized to specific regions, not country-level. A strike warning for "the Middle East" is not actionable; one localized to a specific border region or airspace zone is.</li>
+          <li><strong>API-first architecture</strong> — The platform should be designed for programmatic integration into existing systems, not built around a standalone analyst dashboard as the primary interface.</li>
+        </ul>
+
+        <h2>Said Horizon's API: structure and output format</h2>
+        <p>
+          Said Horizon is built specifically for kinetic threat early warning via API. The platform ingests data from 200+ global sources across 50+ languages on a continuous basis, applies machine learning models trained for pre-attack indicator detection, and delivers structured JSON alerts via REST.
+        </p>
+        <p>Example alert output structure:</p>
+        <div class="code-block">{
+  "alert_id": "sh-20260430-0047",
+  "threat_type": "airstrike_precursor",
+  "region": "Northern border corridor, [region]",
+  "confidence": 0.71,
+  "urgency": "elevated",
+  "trend": "increasing",
+  "signal_sources": 7,
+  "signal_types": [
+    "airspace_notam",
+    "local_media",
+    "social_channel",
+    "cross_source_anomaly"
+  ],
+  "reasoning": "Unusual cluster of airspace restriction NOTAMs
+    detected alongside increased local-language media reporting
+    of military vehicle movement and civilian alerts. Cross-source
+    anomaly pattern consistent with pre-strike indicators observed
+    in prior events in this region.",
+  "detected_at": "2026-04-30T09:14:22Z",
+  "sources_ahead_of_intl_coverage": true
+}</div>
+        <p>
+          Alerts are designed to be consumed directly by downstream systems — autonomous platforms, decision-support tools, analyst dashboards, or alert systems — without requiring manual triage before action.
+        </p>
+
+        <h2>Pricing and access</h2>
+        <p>
+          Said Horizon uses usage-based API pricing.
+        </p>
+        <p>
+          API access is currently available via a brief qualification call to ensure the platform is a fit for the team's use case and compliance requirements.
+        </p>
+
+        <div style="margin-top:52px;margin-bottom:48px;">
+          <p class="eyebrow">Related reading</p>
+          <div style="display:grid;gap:12px;margin-top:16px;">
+            <a href="what-is-indications-and-warning-intelligence.html" style="display:block;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.04);color:var(--steel);font-size:15px;">What Is Indications and Warning (I&amp;W) Intelligence? &rarr;</a>
+            <a href="airstrike-early-warning-software.html" style="display:block;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.04);color:var(--steel);font-size:15px;">Airstrike Early Warning Software: Detecting Pre-Strike Signals with OSINT &rarr;</a>
+            <a href="golden-dome-intelligence-layer.html" style="display:block;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.04);color:var(--steel);font-size:15px;">Golden Dome Missile Defense Needs an Intelligence Layer &rarr;</a>
+          </div>
+        </div>
+
+        <div class="faq-inline">
+          <p class="eyebrow">Common questions</p>
+          <details>
+            <summary>What is an OSINT threat intelligence API?</summary>
+            <p>An OSINT threat intelligence API delivers structured threat intelligence derived from open-source data — public media, government notices, social platforms, and aviation data. It returns machine-readable alert objects that integrate into existing workflows, autonomous systems, or decision-support platforms without manual triage at the ingestion layer.</p>
+          </details>
+          <details>
+            <summary>How is a kinetic threat intelligence API different from a cyber threat intelligence API?</summary>
+            <p>Cyber threat intelligence APIs track digital threats: malware hashes, phishing URLs, compromised IPs. Kinetic threat intelligence APIs track physical-world threats: airstrikes, missile launches, and drone attacks. The data sources, indicator types, and detection logic are fundamentally different. A cyber intel platform is not useful for kinetic early warning.</p>
+          </details>
+          <details>
+            <summary>What should structured output from an OSINT kinetic threat API include?</summary>
+            <p>A well-designed kinetic threat intelligence API returns: threat type classification, geographic region, confidence score, urgency rating, signal source count, trend direction, chain-of-reasoning summary, and timestamp — as structured JSON, not unformatted text.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <p class="eyebrow">Get API Access</p>
+        <h2>Ready to evaluate Said Horizon for your team's use case?</h2>
+      </div>
+      <a class="button primary" href="https://calendly.com/will-saidindustries/api-access" target="_blank" rel="noopener">Book a call</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Said Industries, Inc.</strong>
+      <p>Open-source indications &amp; warning intelligence for missile defense, aerospace, and national security.</p>
+      <p>hello@saidindustries.com</p>
+    </div>
+    <a href="https://calendly.com/will-saidindustries/api-access" target="_blank" rel="noopener">Get API Access</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

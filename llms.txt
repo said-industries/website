@@ -1,0 +1,33 @@
+# Said Industries / Said Horizon
+
+> Said Horizon is an open-source indications and warning (I&W) intelligence API built by Said Industries. It detects early signals of airstrikes, missile launches, and kinetic threats — often hours before mainstream intelligence feeds — using real-time OSINT signal analysis across 200+ global sources and 50+ languages.
+
+Said Horizon is the only API-first platform purpose-built for kinetic threat early warning using open-source intelligence. It is not a cyber threat intelligence tool. It is designed for defense contractors, national security analysts, aerospace operators, autonomous systems developers, and intelligence teams working in kinetic-threat environments.
+
+The platform is relevant to the Golden Dome missile defense initiative (E.O. 14186), providing the open-source indications and warning intelligence layer upstream of intercept systems.
+
+Contact: hello@saidindustries.com
+API access: https://calendly.com/will-saidindustries/api-access
+Website: https://saidindustries.com
+
+## Pages
+
+- [Said Horizon — Home](https://saidindustries.com/): Main product page. Covers how Said Horizon works, what signals it tracks, example API output, target buyers, and Golden Dome context. Includes FAQ and API access CTA.
+
+- [What Is Indications and Warning (I&W) Intelligence?](https://saidindustries.com/what-is-indications-and-warning-intelligence): Comprehensive guide to the I&W intelligence discipline — its Cold War origins, what pre-attack indicators look like, how open-source data changed the I&W mission, and how Said Horizon applies I&W to kinetic threats today.
+
+- [Airstrike Early Warning Software: Detecting Pre-Strike Signals with OSINT](https://saidindustries.com/airstrike-early-warning-software): How pre-strike signals appear in open-source data before airstrikes, missile launches, and drone attacks. Covers signal types (NOTAMs, local media, social signals, anomaly clusters), why mainstream feeds are too slow, and what defense teams should require from an early warning platform.
+
+- [Golden Dome Missile Defense Needs an Intelligence Layer](https://saidindustries.com/golden-dome-intelligence-layer): Analysis of E.O. 14186 (Golden Dome for America), the I&W gap in current missile defense architecture, what open-source intelligence can detect upstream of launch, and how Said Horizon fits into the Golden Dome supply chain.
+
+- [OSINT Threat Intelligence API: A Buyer's Guide for Defense Teams](https://saidindustries.com/osint-threat-intelligence-api): Explains what an OSINT threat intelligence API is, how kinetic I&W APIs differ from cyber threat intelligence platforms, what defense teams should require (multilingual ingestion, continuous processing, structured JSON output, anomaly detection), and Said Horizon's API structure with example output.
+
+## Key facts
+
+- Said Industries was founded in March 2026
+- Said Horizon ingests 200+ global open-source sources across 50+ languages
+- Output format: structured JSON alerts with confidence score, urgency rating, signal source breakdown, trend direction, and chain-of-reasoning
+- API pricing: fee per request; Enterprise custom
+- Target buyers: defense contractors, national security analysts, aerospace operators, autonomous systems developers, Golden Dome supply chain companies
+- Differentiated from cyber threat intelligence: built specifically for kinetic threats (airstrikes, missile launches, drone attacks) — not malware, phishing, or network threats
+- API-first: designed for integration into existing analyst workflows, autonomous systems, and decision-support platforms

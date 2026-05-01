@@ -2,5 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://saidindustries.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://saidindustries.com/what-is-indications-and-warning-intelligence</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saidindustries.com/airstrike-early-warning-software</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saidindustries.com/golden-dome-intelligence-layer</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://saidindustries.com/osint-threat-intelligence-api</loc>
+    <priority>0.8</priority>
   </url>
 </urlset>

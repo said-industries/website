@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Airstrike Early Warning Software: Detecting Pre-Strike Signals with OSINT | Said Horizon</title>
+  <meta name="description" content="Airstrikes don't happen without warning — they leave a trail of open-source signals hours before they occur. Learn how airstrike early warning software detects pre-strike indicators using OSINT, and what defense teams should look for in an early warning platform." />
+  <meta name="keywords" content="airstrike early warning software, kinetic threat early warning, pre-attack signal detection, drone attack prediction, missile launch early warning, OSINT airstrike detection, strike early warning system" />
+
+  <meta property="og:title" content="Airstrike Early Warning Software: Detecting Pre-Strike Signals with OSINT" />
+  <meta property="og:description" content="Airstrikes leave a trail of weak signals hours before they occur. Learn how OSINT-based early warning software detects them first." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://saidindustries.com/airstrike-early-warning-software" />
+
+  <link rel="canonical" href="https://saidindustries.com/airstrike-early-warning-software" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Airstrike Early Warning Software: Detecting Pre-Strike Signals with OSINT",
+    "description": "How open-source intelligence is used to detect early signals of airstrikes, missile launches, and drone attacks before they appear in mainstream feeds.",
+    "author": { "@type": "Organization", "name": "Said Industries" },
+    "publisher": { "@type": "Organization", "name": "Said Industries", "url": "https://saidindustries.com" },
+    "url": "https://saidindustries.com/airstrike-early-warning-software"
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What open-source signals precede an airstrike?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common pre-strike OSINT signals include: airspace closure NOTAMs and unusual routing restrictions, local-language media reporting heightened military activity or evacuations, abnormal logistics and supply movement patterns visible in regional sources, social channel reports from near the target area, and cross-source anomaly clusters where multiple unrelated sources show abnormal patterns simultaneously."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much lead time can OSINT provide before an airstrike?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Lead time varies by event type and region. In documented cases, local-language media and airspace data have carried pre-strike indicators 2–8 hours before mainstream international coverage picked up the same event. OSINT platforms designed for early detection — with continuous multilingual ingestion and anomaly detection — can identify weak-signal clusters before they become obvious."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between airstrike early warning and cyber threat intelligence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cyber threat intelligence focuses on digital threats: malware, phishing campaigns, compromised infrastructure, and adversary TTPs in network environments. Airstrike early warning focuses on kinetic threats in the physical world: military strikes, drone attacks, and missile launches. The data sources, detection methods, and alerting cadence are fundamentally different. Most threat intelligence platforms are built for the cyber use case and are not useful for kinetic early warning."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .page-hero { min-height: auto; padding: 80px 20px 60px; }
+    .prose { max-width: 760px; }
+    .prose h2 { font-size: clamp(26px, 3vw, 40px); margin-top: 52px; margin-bottom: 14px; }
+    .prose p { color: var(--muted); font-size: 17px; line-height: 1.75; margin-bottom: 20px; }
+    .prose ul { color: var(--muted); font-size: 17px; line-height: 1.75; padding-left: 22px; margin-bottom: 20px; }
+    .prose li { margin-bottom: 8px; }
+    .prose strong { color: var(--text); }
+    .breadcrumb { color: var(--muted); font-size: 13px; margin-bottom: 28px; }
+    .breadcrumb a { color: var(--blue); }
+    .faq-inline { margin-top: 48px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="Said Industries home">
+      <img src="assets/said-logo.png" alt="Said Industries logo" />
+    </a>
+    <nav class="nav">
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#signals">Signals</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="nav-cta" href="https://calendly.com/will-saidindustries/api-access" target="_blank" rel="noopener">Get API Access</a>
+    </nav>
+    <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero page-hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Kinetic threat early warning</p>
+        <h1 style="font-size:clamp(38px,6vw,72px);line-height:1.0;">Airstrike Early Warning: Detecting Pre-Strike Signals with OSINT</h1>
+        <p class="hero-copy" style="font-size:clamp(17px,2vw,21px);">
+          Airstrikes, missile launches, and drone attacks do not appear without warning. They leave a trail of weak, fragmented, multilingual open-source signals. Here is how early warning software detects them — and what to look for in a platform.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:40px;">
+      <div class="prose">
+        <p class="breadcrumb"><a href="index.html">Said Horizon</a> &rsaquo; Airstrike Early Warning Software</p>
+
+        <h2>The problem: mainstream intelligence feeds are too slow</h2>
+        <p>
+          When an airstrike or missile launch is reported in major international media, the event has already occurred. For analysts and operators who need lead time — not post-event reporting — mainstream feeds provide no actionable warning. The information arrives too late for decisions that matter: alert systems, evacuation protocols, autonomous system adjustments, or intelligence escalation.
+        </p>
+        <p>
+          The gap is not a lack of data. It is a lack of systems capable of processing the right data fast enough. Before every documented strike event, there are signals — publicly available, in open-source data — that indicate preparation or imminent activity. Most intelligence workflows are not built to find them.
+        </p>
+
+        <h2>What pre-strike signals actually look like</h2>
+        <p>
+          Airstrikes and missile launches generate observable open-source signals before they occur. These signals are individually weak — no single data point is conclusive — but in aggregate and across sources, they form detectable patterns. Common pre-strike indicators include:
+        </p>
+        <ul>
+          <li><strong>Airspace restriction notices (NOTAMs)</strong> — Aviation authorities issue NOTAMs that close or restrict airspace ahead of military activity. Unusual clustering or timing of NOTAMs near a region is a documented pre-strike signal.</li>
+          <li><strong>Local-language media</strong> — Regional outlets in conflict-adjacent areas often carry reporting on heightened military activity, unusual troop movements, or civilian evacuation warnings hours before international media coverage begins.</li>
+          <li><strong>Social channel signals</strong> — Ground-level reports, photos, and eyewitness accounts in regional social channels frequently precede formal intelligence reporting. These signals are low-visibility and often multilingual.</li>
+          <li><strong>Anomalous activity pattern changes</strong> — Sudden shifts in normal regional behavior — commercial flight diversions, unexpected border closures, unusual supply movement — can signal imminent kinetic activity.</li>
+          <li><strong>Cross-source correlation spikes</strong> — When multiple unrelated data sources show simultaneous abnormal patterns in the same region, the aggregate signal is far more significant than any individual data point.</li>
+        </ul>
+
+        <h2>Why these signals are hard to detect without dedicated software</h2>
+        <p>
+          The challenge is not the existence of pre-strike signals — it is the scale, fragmentation, and language diversity of the data they appear in. A single conflict zone may generate tens of thousands of potentially relevant data points per day, across dozens of languages, on platforms with no centralized access point.
+        </p>
+        <p>
+          Human analysts cannot monitor this volume in real time. General-purpose monitoring tools are not designed to detect the specific anomaly patterns associated with pre-strike activity. Cyber threat intelligence platforms — built for malware signatures and phishing indicators — are entirely the wrong tool for this problem.
+        </p>
+        <p>
+          Effective airstrike early warning software requires: continuous automated ingestion across hundreds of global sources, multilingual processing at speed, machine learning models trained specifically on kinetic threat indicator patterns, and structured alerting that ranks signals by urgency and confidence — not a dashboard that shows everything equally.
+        </p>
+
+        <h2>What defense teams should require from an early warning platform</h2>
+        <p>
+          When evaluating airstrike early warning software, the capabilities that matter are:
+        </p>
+        <ul>
+          <li><strong>Source breadth and language coverage</strong> — A platform that only ingests English-language media will miss the most important signals. Local-language sources in the affected region are consistently ahead of international reporting.</li>
+          <li><strong>Continuous ingestion, not batch updates</strong> — Pre-strike signals can compress into a short window. A platform that updates every few hours provides no meaningful early warning advantage.</li>
+          <li><strong>Anomaly detection, not keyword search</strong> — Keyword-based monitoring catches obvious signals after they are already widely reported. Genuine early warning requires pattern recognition across sources — identifying that something is unusual before the explicit language appears.</li>
+          <li><strong>Structured output with confidence scoring</strong> — Alerts should be machine-readable, with urgency ratings, source counts, and reasoning chains — not raw text that requires further analyst triage.</li>
+          <li><strong>API-first integration</strong> — Early warning intelligence is most valuable when it feeds into existing workflows and systems, not when it sits in a separate dashboard that analysts check manually.</li>
+        </ul>
+
+        <h2>How Said Horizon approaches airstrike early warning</h2>
+        <p>
+          Said Horizon is an API-first platform built specifically for kinetic threat early warning. It continuously ingests data from 200+ global open-source sources across 50+ languages — local-language media, aviation NOTAMs, airspace restriction notices, and regional social signals. Machine learning models detect weak-signal clusters and cross-source anomalies consistent with pre-strike activity, then surface structured JSON alerts with confidence scores, urgency ratings, and chain-of-reasoning output.
+        </p>
+        <p>
+          The platform is designed to deliver pre-strike indicators before they appear in mainstream intelligence feeds — providing the lead time that analyst workflows and autonomous systems need to act. Said Horizon integrates as a REST API, feeding directly into existing decision-support platforms, alert systems, or operator dashboards.
+        </p>
+
+        <div style="margin-top:52px;margin-bottom:48px;">
+          <p class="eyebrow">Related reading</p>
+          <div style="display:grid;gap:12px;margin-top:16px;">
+            <a href="what-is-indications-and-warning-intelligence.html" style="display:block;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.04);color:var(--steel);font-size:15px;">What Is Indications and Warning (I&amp;W) Intelligence? &rarr;</a>
+            <a href="golden-dome-intelligence-layer.html" style="display:block;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.04);color:var(--steel);font-size:15px;">Golden Dome Missile Defense Needs an Intelligence Layer &rarr;</a>
+            <a href="osint-threat-intelligence-api.html" style="display:block;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,0.04);color:var(--steel);font-size:15px;">OSINT Threat Intelligence API: A Buyer's Guide for Defense Teams &rarr;</a>
+          </div>
+        </div>
+
+        <div class="faq-inline">
+          <p class="eyebrow">Common questions</p>
+          <details>
+            <summary>What open-source signals precede an airstrike?</summary>
+            <p>Common pre-strike OSINT signals include airspace closure NOTAMs, local-language media reporting heightened activity or evacuations, abnormal logistics patterns in regional sources, social channel reports from near the target area, and cross-source anomaly clusters where multiple unrelated sources show abnormal patterns simultaneously.</p>
+          </details>
+          <details>
+            <summary>How much lead time can OSINT provide before an airstrike?</summary>
+            <p>Lead time varies by event type and region. In documented cases, local-language media and airspace data have carried pre-strike indicators 2–8 hours before mainstream international coverage picked up the same event. Platforms designed for continuous multilingual ingestion and anomaly detection can identify weak-signal clusters before they become obvious.</p>
+          </details>
+          <details>
+            <summary>What is the difference between airstrike early warning and cyber threat intelligence?</summary>
+            <p>Cyber threat intelligence focuses on digital threats: malware, phishing, compromised infrastructure. Airstrike early warning focuses on kinetic threats: military strikes, drone attacks, and missile launches. The data sources, detection methods, and alerting cadence are fundamentally different. Most threat intelligence platforms are built for the cyber use case and are not useful for kinetic early warning.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div>
+        <p class="eyebrow">Get API Access</p>
+        <h2>See what kinetic threats Said Horizon detects before they become obvious.</h2>
+      </div>
+      <a class="button primary" href="https://calendly.com/will-saidindustries/api-access" target="_blank" rel="noopener">Book a call</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Said Industries, Inc.</strong>
+      <p>Open-source indications &amp; warning intelligence for missile defense, aerospace, and national security.</p>
+      <p>hello@saidindustries.com</p>
+    </div>
+    <a href="https://calendly.com/will-saidindustries/api-access" target="_blank" rel="noopener">Get API Access</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
